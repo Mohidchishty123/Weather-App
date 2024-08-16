@@ -1,0 +1,134 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#weatherContainer {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #0fdae9;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#currentWeather {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#currentWeather h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fb3131;
+}
+
+#currentWeather h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #07000c;
+}
+
+#currentWeather p {
+    font-size: 48px;
+    margin: 0;
+    color: #00090e;
+}
+
+#additionalInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#additionalInfo p {
+    font-size: 18px;
+    color: #e00909;
+}
+
+#forecast {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#forecast h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    color: #34077c;
+}
+
+#dailyForecast {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+#dailyForecast div {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #0f0101;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#dailyForecast p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#loading {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #00a8ff;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#weatherForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#weatherForm input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 250px;
+    outline: none;
+}
+
+#weatherForm button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: #3741d1;
+    color: white;
+    cursor: pointer;
+}
+
+#weatherForm button:hover {
+    background-color: #a02a2a;
+}

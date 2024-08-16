@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="weatherContainer">
+        <form id="weatherForm">
+            <input type="text" id="location" name="location" placeholder="Enter your city..." required>
+            <button type="submit">Get Weather</button>
+        </form>
+
+        <div id="currentWeather">
+            <h2 id="conditions">Clear Sky</h2>
+            <h3 id="locationDisplay">Auckland</h3>
+            <p id="temperature">10 °C</p>
+
+            <div id="additionalInfo">
+                <p><strong>Feels Like:</strong> <span id="feelsLike">8 °C</span></p>
+                
+                <p><strong>Chance of Rain:</strong> <span id="chanceOfRain">20 %</span></p>
+                <p><strong>Wind Speed:</strong> <span id="windSpeed">18.5 km/h</span></p>
+            </div>
+        </div>
+
+        <div id="forecast">
+            <h3>Daily Forecast</h3>
+            <div id="dailyForecast">
+                <!-- Daily forecast will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="hidden">Loading...</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
