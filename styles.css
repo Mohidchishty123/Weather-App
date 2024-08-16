@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
@@ -11,6 +12,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Container Styles */
 #weatherContainer {
     width: 100%;
     max-width: 1200px;
@@ -23,6 +25,7 @@ body {
     align-items: center;
 }
 
+/* Weather Information Styles */
 #currentWeather {
     width: 100%;
     text-align: center;
@@ -30,42 +33,46 @@ body {
 }
 
 #currentWeather h2 {
-    font-size: 36px;
+    font-size: 24px; /* Adjusted for smaller screens */
     margin-bottom: 10px;
     color: #fb3131;
 }
 
 #currentWeather h3 {
-    font-size: 28px;
+    font-size: 20px; /* Adjusted for smaller screens */
     margin-bottom: 20px;
     color: #07000c;
 }
 
 #currentWeather p {
-    font-size: 48px;
+    font-size: 36px; /* Adjusted for smaller screens */
     margin: 0;
     color: #00090e;
 }
 
+/* Additional Info Styles */
 #additionalInfo {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stacked on smaller screens */
+    align-items: center;
     margin-top: 20px;
 }
 
 #additionalInfo p {
-    font-size: 18px;
+    font-size: 16px; /* Adjusted for smaller screens */
     color: #e00909;
+    margin: 5px 0;
 }
 
+/* Forecast Section Styles */
 #forecast {
     width: 100%;
     margin-top: 30px;
 }
 
 #forecast h3 {
-    font-size: 24px;
+    font-size: 20px; /* Adjusted for smaller screens */
     margin-bottom: 20px;
     text-align: left;
     width: 100%;
@@ -74,14 +81,14 @@ body {
 
 #dailyForecast {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Adjusted gap */
     width: 100%;
 }
 
 #dailyForecast div {
     background-color: #e0e0e0;
-    padding: 15px;
+    padding: 10px; /* Adjusted padding */
     border-radius: 10px;
     text-align: center;
     color: #0f0101;
@@ -90,9 +97,10 @@ body {
 
 #dailyForecast p {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 14px; /* Adjusted for smaller screens */
 }
 
+/* Loading Indicator Styles */
 #loading {
     margin-top: 20px;
     font-size: 18px;
@@ -104,9 +112,11 @@ body {
     display: none;
 }
 
+/* Form Styles */
 #weatherForm {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack on smaller screens */
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -115,8 +125,10 @@ body {
     font-size: 16px;
     border-radius: 5px 0 0 5px;
     border: none;
-    width: 250px;
+    width: 100%; /* Full width on small screens */
+    max-width: 250px; /* Limit max width */
     outline: none;
+    margin-bottom: 10px; /* Spacing between input and button */
 }
 
 #weatherForm button {
@@ -127,8 +139,67 @@ body {
     background-color: #3741d1;
     color: white;
     cursor: pointer;
+    width: 100%; /* Full width on small screens */
+    max-width: 250px; /* Limit max width */
 }
 
 #weatherForm button:hover {
     background-color: #a02a2a;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    #currentWeather h2 {
+        font-size: 20px;
+    }
+
+    #currentWeather h3 {
+        font-size: 18px;
+    }
+
+    #currentWeather p {
+        font-size: 30px;
+    }
+
+    #additionalInfo p {
+        font-size: 14px;
+    }
+
+    #forecast h3 {
+        font-size: 18px;
+    }
+
+    #dailyForecast p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #currentWeather h2 {
+        font-size: 18px;
+    }
+
+    #currentWeather h3 {
+        font-size: 16px;
+    }
+
+    #currentWeather p {
+        font-size: 24px;
+    }
+
+    #additionalInfo p {
+        font-size: 12px;
+    }
+
+    #forecast h3 {
+        font-size: 16px;
+    }
+
+    #dailyForecast p {
+        font-size: 10px;
+    }
+
+    #weatherForm input, #weatherForm button {
+        width: 100%; /* Full width on very small screens */
+    }
 }
